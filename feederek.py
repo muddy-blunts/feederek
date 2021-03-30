@@ -8,10 +8,10 @@ import telegram
 feed_list =["https://vchasnoua.com/rss",
             ]
 
-last_feeds = pickle.load(open("/home/muddy/feederek/db.p", 'rb'))
+last_feeds = pickle.load(open("/home/big02tramp/feederek/db.p", 'rb'))
 fee_links = []
 
-bot = telegram.Bot(token='1723458733:AAFfwCThgBDtVvoPS43-L_Lz-UwfjVHop8c')
+bot = telegram.Bot(token='1085303064:AAHWMrncjPkJl7-JKO9STBlzkdUxcBbH3hg')
 
 print(last_feeds)
 print("-----Last feeds---")
@@ -32,9 +32,9 @@ def feederek():
 
 
                 message = str("\n" + entry_title +"\n" + entry_id)
-                bot.sendMessage(chat_id="@pokrovskme", text=message)
+                bot.sendMessage(chat_id="@vchasnoua", text=message)
 
-    pickle.dump(fee_links, open("/home/muddy/feederek/db.p", 'wb'))
+    pickle.dump(fee_links, open("/home/big02tramp/feederek/db.p", 'wb'))
     sys.exit()
 
 if __name__ == "__main__":
